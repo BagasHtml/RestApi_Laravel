@@ -19,10 +19,10 @@ class CheckApiKey
 
         if ($apiKey !== "ZNS3NGASLXQ") {
             return response()->json([
-                'massage' => 'Akses ditolak! API Key tidak sesuai atau tidak ada.'
-            ]. 401);
+                'message' => 'Akses ditolak! API Key tidak sesuai atau tidak ada.'
+            ], 401);
         }
         
-        return response()->json($request);
+        return $next($request);
     }
 }
