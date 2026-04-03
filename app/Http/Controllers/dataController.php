@@ -42,7 +42,7 @@ class dataController extends Controller
         if (!$data) 
         {
             return response()->json([
-                'massage' => 'Data tidak ditemukan'
+                'message' => 'Data tidak ditemukan'
             ], 404);
 
             return response()->json($data);
